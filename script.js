@@ -57,5 +57,5 @@ copy_btn.addEventListener('click',event => {
     text.setSelectionRange(0,99999);
     document.execCommand("copy");
 
-    document.querySelector('#copy-alert').innerText = '<span style="color:green"> BERHASIL DISALIN </span>';
+    document.querySelector('#copy-alert').innerText = '• BERHASIL DISALIN •';
 });

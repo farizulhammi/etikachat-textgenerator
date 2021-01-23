@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Etika Chat Guru</title>
+<!--Kode untuk mencegah seleksi teks, block teks dll.-->
+<script type="text/javascript">
+function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectstart=function(){return false};else if(typeof e.style.MozUserSelect!="undefined")e.style.MozUserSelect="none";else e.onmousedown=function(){return false};e.style.cursor="default"}window.onload=function(){disableSelection(document.body)}
+</script>
+<!--Kode untuk mematikan fungsi klik kanan di blog-->
+<script type="text/javascript">
+function mousedwn(e){try{if(event.button==2||event.button==3)return false}catch(e){if(e.which==3)return false}}document.oncontextmenu=function(){return false};document.ondragstart=function(){return false};document.onmousedown=mousedwn
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="container">
+    <div class="toptable">Etika Chat <span style="color: yellow">Generator</span></div>
+    <div style="padding:10px">
+    
+    <section id="form">
+        <form action="">
+        <label for="nama">Nama Anda</label>
+        <input type="text" id="nama" name="nama" placeholder="Budi Utama">
+        <br>
+        <label for="kelas">Kelas Anda</label>
+        <input type="text" id="kelas" name="kelas" placeholder="XI - RPL">
+    	<br>
+		<label for="tujuan">Tujuan Anda</label>
+        <textarea id="tujuan" name="tujuan" placeholder="Saya ingin bertanya tentang materi kemarin, Tentang gerbang logika NORN"></textarea>
+        <br>
+        <label for="trmksh">Ucapan Terima kasih</label>
+        <input type="text" id="terimakasih" name="terimakasih" placeholder="Sebelumnya terimakasih">
+        <br>
+        <div>
+        <label>Guru Anda</label>  
+        <select id="jk">
+        <option value=" ">Select One</option>
+        <option value="pak">Pria</option>
+        <option value="bu">Wanita</option>
+        </select>
+        <select id="sns">
+        <option value=" ">Select One</option>
+        <option value="m">Muslim</option>
+        <option value="ns">Non Muslim</option>
+        </select>
+        </div>
+        <br>
+      
+            <button class="button button1" id="generate-btn" >Generate</button>
+        </form>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section id="result-section">
+        <div id="result">
+           <label for="text">Result</label>
+           <textarea id="text"></textarea>
+           <br>
+           <button id="copy-btn" class="button button1">Copy</button>
+            <div id="copy-alert"></div>
+        </div>
+    </section>
+   </div>
+   </div>
+
+
+<div class="copy">
+<span class="slider">
+&copy;
+<b>
+<a style="text-decoration:none;color:#34495E;">
+Farizul Hammi</a></b>
+</span>
+
+<span class="slider">
+Etika Chat Guru
+<b>
+<a style="text-decoration:none;color:#34495E;">
+Generator</a></b>
+</span>
+</div>
+</body>
+<script src="script.js"></script>
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("slider");
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none"; 
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1} 
+slides[slideIndex-1].style.display = "block"; 
+setTimeout(showSlides, 3500);
+}
+</script>
+</html>

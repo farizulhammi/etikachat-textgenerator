@@ -1,1 +1,1 @@
-# etikachat-textgenerator
+## Etika Chat Text Generator

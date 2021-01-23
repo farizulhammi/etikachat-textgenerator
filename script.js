@@ -1,10 +1,6 @@
-var today = new Date();
-var get_hour = today.getHours();   
-
 const generate_btn = document.querySelector("#generate-btn");
 const copy_btn = document.querySelector('#copy-btn');
-
-
+ 
 const getData = () => {
     const nama = document.querySelector('#nama');
     const tujuan = document.querySelector('#tujuan');
@@ -15,28 +11,34 @@ const getData = () => {
     
     
     
-    if(sns == 'ns'){
-    if(get_hour = 05||06||07||08||09||10){
+    var today = new Date();
+    var get_hour = today.getHours();  
+    if(sns == 'nm'){
+    
+    if(get_hour >= 05 && get_hour <= 10){
     sns = 'Selamat Pagi';
-    }else if(get_hour = 11||12||13||14||15){
+    }else if(get_hour >= 11 && get_hour <= 15){
     sns = 'Selamat Siang';
-    }else if(get_hour = 16||17||18){
+    }else if(get_hour >= 15 && get_hour <= 18){
     sns = 'Selamat Sore';
-    }else if(get_hour >= 24){
+    }else if(get_hour >= 20 && get_hour <= 24){
     sns = 'Selamat Malam';
     }else if(get_hour < 05){
     sns = 'Mohon maaf mengganggu';
-    };
-    }else{ 
+    }
+    
+    }else if(sns == 'm'){ 
     sns = 'Assalamualaikum';
-    };
+    }else {
+    sns = 'Mohon maaf mengganggu';
+    }
     return {
         nama : nama.value,
         tujuan : tujuan.value,
-        sns,
         jk : jk.value,
         kelas : kelas.value,
-        thank : thank.value
+        thank : thank.value,
+        sns,
     };
 };
 
@@ -57,5 +59,5 @@ copy_btn.addEventListener('click',event => {
     text.setSelectionRange(0,99999);
     document.execCommand("copy");
 
-    document.querySelector('#copy-alert').innerText = '• BERHASIL DISALIN •';
+    document.querySelector('#copy-alert').innerText = '*tercopy*';
 });

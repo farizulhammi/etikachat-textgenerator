@@ -18,7 +18,7 @@ const getData = () => {
     if(sns == 'ns'){
     if(get_hour = 05||06||07||08||09||10){
     sns = 'Selamat Pagi';
-    }else if(get_hour = 11||12||13||14||15){
+    }else if(get_hour == 11||12||13||14||15){
     sns = 'Selamat Siang';
     }else if(get_hour = 16||17||18){
     sns = 'Selamat Sore';

@@ -11,6 +11,7 @@ function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectst
 <script type="text/javascript">
 function mousedwn(e){try{if(event.button==2||event.button==3)return false}catch(e){if(e.which==3)return false}}document.oncontextmenu=function(){return false};document.ondragstart=function(){return false};document.onmousedown=mousedwn
 </script>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -29,7 +30,7 @@ function mousedwn(e){try{if(event.button==2||event.button==3)return false}catch(
         <input type="text" id="kelas" name="kelas" placeholder="XI - RPL">
     	<br>
 		<label for="tujuan">Tujuan Anda</label>
-        <textarea id="tujuan" name="tujuan" placeholder="Saya ingin bertanya tentang materi kemarin, dibagian gerbang logika NORN"></textarea>
+        <textarea id="tujuan" name="tujuan" placeholder="Saya ingin bertanya tentang materi kemarin, Tentang gerbang logika NORN"></textarea>
         <br>
         <label for="trmksh">Ucapan Terima kasih</label>
         <input type="text" id="terimakasih" name="terimakasih" placeholder="Sebelumnya terimakasih">
@@ -41,10 +42,11 @@ function mousedwn(e){try{if(event.button==2||event.button==3)return false}catch(
         <option value="pak">Pria</option>
         <option value="bu">Wanita</option>
         </select>
+        <label>Ucapkan Assalamualaikum</label> 
         <select id="sns">
         <option value=" ">Select One</option>
-        <option value="m">Muslim</option>
-        <option value="ns">Non Muslim</option>
+        <option value="m">Yes</option>
+        <option value="nm">No</option>
         </select>
         </div>
         <br>

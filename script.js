@@ -21,7 +21,7 @@ const getData = () => {
     sns = 'Selamat Siang';
     }else if(get_hour >= 15 && get_hour <= 18){
     sns = 'Selamat Sore';
-    }else if(get_hour >= 20 && get_hour <= 24){
+    }else if(get_hour >= 19 && get_hour <= 24){
     sns = 'Selamat Malam';
     }else if(get_hour < 05){
     sns = 'Mohon maaf mengganggu';
